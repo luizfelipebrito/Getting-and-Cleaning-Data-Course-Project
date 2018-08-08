@@ -1,12 +1,12 @@
 ##------------------------------------------------
-## 1บ Step: Load the libraries
+## 1ยบ Step: Load the libraries
 ##------------------------------------------------
 library(dplyr)
 library(tidyr)
 library(readr)
 
 ##------------------------------------------------
-## 2บ Step: Loading files 
+## 2ยบ Step: Loading files 
 ##------------------------------------------------
 subject_test  <- read.table("subject_test.txt")
 subject_test  <- tbl_df(subject_test)
@@ -30,7 +30,7 @@ features <- read.table("features.txt")
 features <- tbl_df(features)
 
 ##------------------------------------------------
-## 3บ Step: Extracts only the measurements on the 
+## 3ยบ Step: Extracts only the measurements on the 
 ##          mean and standard deviation for each 
 ##          measurement 
 ##------------------------------------------------
@@ -44,7 +44,7 @@ X_test  <- select(X_test,  column_measurement)
 X_train <- select(X_train, column_measurement)
 
 ##------------------------------------------------
-## 4บ Step: Appropriately labels the data set with 
+## 4ยบ Step: Appropriately labels the data set with 
 ##          descriptive variable names.
 ##------------------------------------------------
 column_names_data <- c(features[column_measurement, 2])
@@ -59,7 +59,7 @@ names(y_test)  <- c("id_activity")
 names(y_train) <- c("id_activity")
 
 ##------------------------------------------------
-## 5บ Step: Uses descriptive activity names to  
+## 5ยบ Step: Uses descriptive activity names to  
 ##          name the activities in the data set.
 ##------------------------------------------------
 y_test <- mutate(y_test, activity = ifelse(id_activity == 1 , "WALKING", 
@@ -76,7 +76,7 @@ y_train <- mutate(y_train, activity = ifelse(id_activity == 1 , "WALKING",
 
 
 ##------------------------------------------------
-## 6บ Step: Merges the training and the test sets 
+## 6ยบ Step: Merges the training and the test sets 
 ##          to create one data set. 
 ##------------------------------------------------
 data_set_test  <- cbind(y_test[2],  subject_test,  X_test)
@@ -85,7 +85,7 @@ data_set_train <- cbind(y_train[2], subject_train, X_train)
 data_set_final <- rbind(data_set_train, data_set_test)
 
 ##------------------------------------------------
-## 7บ Step: Creates a second, independent tidy 
+## 7ยบ Step: Creates a second, independent tidy 
 ##          data set with the average of each 
 ##          variable for each activity and each
 ##          subject.
@@ -98,5 +98,4 @@ data_set_final_group_by <- summarise_all(data_set_final_group_by, (funs(mean)))
 ## Final Step: View/Write tidy dataset
 ##------------------------------------------------
 View(data_set_final_group_by)
-
 write.table(data_set_final_group_by,  file="data_set_final_group_by.txt", row.name=FALSE)
