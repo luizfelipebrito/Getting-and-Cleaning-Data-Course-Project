@@ -11,3 +11,5 @@ The analysis was done by following these steps
 ## 6º Step: Merges the training and the test sets to create one data set. 
 ## 7º Step: Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 ## Final Step: View/Write tidy dataset.
+
+The file run_analysis.R in can be run as long as the Samsung data is in your working directory.
