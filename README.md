@@ -1,7 +1,17 @@
 # Getting-and-Cleaning-Data-Course-Project
 Coursera - Peer-graded Assignment: Getting and Cleaning Data Course Project
 
-The analysis was done by following these steps 
+The dataset includes the following files:
+=========================================
+
+- 'README.txt'
+
+- 'run_analysis.R':  R script performed to generate the tidy data set.
+
+Notes: 
+======
+The file run_analysis.R in can be run as long as the Samsung data is in your working directory.
+The analysis was done by following these steps: 
 
 ## 1º Step: Load the libraries.
 ## 2º Step: Loading files. 
@@ -12,4 +22,3 @@ The analysis was done by following these steps
 ## 7º Step: Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 ## Final Step: View/Write tidy dataset.
 
-The file run_analysis.R in can be run as long as the Samsung data is in your working directory.
