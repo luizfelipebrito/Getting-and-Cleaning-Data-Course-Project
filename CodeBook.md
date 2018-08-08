@@ -1,6 +1,6 @@
 # Peer-graded Assignment: Getting and Cleaning Data Course Project 
 # Version 1.0 
-# Last modified {{ modified }}
+# Last modified  "`r format(Sys.time(), '%d %B, %Y')`"
 ## Luiz Felipe de Almeida Brito. 
 ## Coursera - Data Science - Johns Hopkins University
 ## https://www.linkedin.com/in/luiz-felipe-brito-9317962a/ 
